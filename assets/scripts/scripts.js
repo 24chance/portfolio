@@ -6,10 +6,10 @@ secondNav = document.querySelector('nav.second')
 nav = document.querySelector('nav.first')
 bars = document.querySelector('.fa-bars')
 sidenav = document.querySelector('.sidenav')
+links = document.querySelectorAll('.sidenav .links a')
 x = document.querySelector('.closebtn')
 backToTop = document.querySelector(".back-to-top");
 loader = document.querySelector('.loader');
-
 
 
 // deal with the loader
@@ -50,7 +50,18 @@ bars.addEventListener('click', () => {
 x.addEventListener('click', (event) => {
     event.preventDefault()
     sidenav.classList.remove('active')
+    document.body.style.overflow = 'auto'
 })
+
+
+// close the sidebar when the links inside the sidenav are clicked
+
+for (let i = 0; i < links.length; i++) {
+    links[i].addEventListener('click', () => {
+        sidenav.classList.remove('active')
+        document.body.style.overflow = 'auto'
+    })
+}
 
 
 
