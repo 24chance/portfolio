@@ -115,3 +115,17 @@ titles.forEach(title => observer.observe(title));
 
 
 
+
+
+// toggle the certificates section
+document.querySelector('#btnCert').addEventListener('click', () => {
+    document.querySelector('#certificates').classList.add('active');
+    document.body.style.overflow = 'hidden'
+})
+
+document.querySelector('#certificates span').addEventListener('click', () => {
+    document.querySelector('#certificates').classList.remove('active');
+    document.body.style.overflow = 'auto'
+})
+
+

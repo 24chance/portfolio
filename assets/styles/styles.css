@@ -1112,3 +1112,103 @@ footer{
 }
 
 
+
+
+
+
+/* certficates now  */
+.certificates{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    transition: .3s ease;
+    scale: 0;
+    opacity: 0;
+}
+
+.active{
+    opacity: 1;
+    scale: 1;
+}
+
+.certificates .box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 350px;
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 40px 20px;
+    overflow: auto;
+    border: 2px solid var(--accent-light);
+}
+
+.certificates .box::-webkit-scrollbar{
+    display: none;
+}
+
+.certificates .box h2{
+    color: var(--text-dark);
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.certificates .box p{
+    color: var(--text-light);
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 13px;
+}
+
+.certificates .box .content{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+}
+
+.certificates .box .content a{
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+    color: var(--text-light);
+    font-size: 13px;
+    transition: .3s;
+}
+
+.certificates .box .content a i{
+    color: var(--accent-light);
+    font-size: 15px;
+    margin-right: 5px;
+}
+
+.certificates .box .content a:hover{
+    color: var(--text-dark);
+}
+
+.certificates .box span{
+    color: var(--text-light);
+    font-size: 20px;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+
+/* media screen for certficates */
+@media screen and (max-width: 770px) {
+    .certificates .box{
+        width: 90%;
+    }
+}
