@@ -10,6 +10,14 @@ links = document.querySelectorAll('.sidenav .links a')
 x = document.querySelector('.closebtn')
 backToTop = document.querySelector(".back-to-top");
 loader = document.querySelector('.loader');
+hireBtn = document.querySelector('.hireBtn');
+
+
+
+// redirect to the email page when the hire button is clicked
+hireBtn.addEventListener('click', () => {
+    window.location.href = '#contacts'
+})
 
 
 // deal with the loader
@@ -128,4 +136,9 @@ document.querySelector('#certificates span').addEventListener('click', () => {
     document.body.style.overflow = 'auto'
 })
 
-
+document.addEventListener('keydown', (event) => {
+    if(event.key === 'Escape' && document.querySelector('#certificates').classList.contains('active')){
+        document.querySelector('#certificates').classList.remove('active');
+        document.body.style.overflow = 'auto'
+    }
+})

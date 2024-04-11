@@ -374,8 +374,8 @@ nav.menu .buttons{
 
 /* display message when the screen is too small */
 .small{
-    position: absolute;
-    z-index: 100;
+    position: fixed;
+    z-index: 100000;
     background: var(--accent-dark);
     top: 0;
     left: 0;
@@ -975,6 +975,15 @@ section#projects .content .box .des a{
 section#projects .content .box .des a:hover{
     box-shadow: 0 0 25px var(--accent-light);
     cursor: pointer;
+}
+
+
+/* media screen for projects */
+@media screen and (max-width: 770px) {
+    section#projects .content .box{
+        width: 280px;
+        height: 200px;
+    }
 }
 
 
