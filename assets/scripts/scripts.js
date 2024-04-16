@@ -16,7 +16,7 @@ hireBtn = document.querySelector('.hireBtn');
 
 // redirect to the email page when the hire button is clicked
 hireBtn.addEventListener('click', () => {
-    window.location.href = '#contacts'
+    window.location.href = 'https://mail.google.com/mail/u/0/#inbox?compose=new'
 })
 
 
