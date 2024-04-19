@@ -11,12 +11,18 @@ x = document.querySelector('.closebtn')
 backToTop = document.querySelector(".back-to-top");
 loader = document.querySelector('.loader');
 hireBtn = document.querySelector('.hireBtn');
+resumeBtn = document.querySelector('#resume');
 
 
 
 // redirect to the email page when the hire button is clicked
 hireBtn.addEventListener('click', () => {
-    window.location.href = 'https://mail.google.com/mail/u/0/#inbox?compose=new'
+    window.open("https://mail.google.com/mail/u/0/#inbox?compose=new", "_blank")
+})
+
+// redirect to the resume page when the hire button is clicked
+resumeBtn.addEventListener('click', () => {
+    window.open("https://docs.google.com/document/d/1u2I8ldCtTewcpHslevcCJR9TgfvCuIPCcgOtJ2ZgNUs/edit?usp=sharing", "_blank")
 })
 
 
