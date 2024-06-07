@@ -392,7 +392,7 @@ nav.menu .buttons{
     transition: .5s ease-in-out;
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 320px) {
     .small{
         scale: 1;
     }
@@ -604,7 +604,7 @@ section .content{
 section .image{
     width: 300px;
     height: 300px;
-    border-radius: 50%;
+    border-radius: 100%;
     overflow: hidden;
 }
 
@@ -612,6 +612,14 @@ section .image img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+@media screen and (max-width: 770px) {
+    section .image{
+        width: 200px;
+        height: 200px;
+        border-radius: 100%;
+    }
 }
 
 section .text{
@@ -696,6 +704,12 @@ section#about .skills .content p{
     width: 250px;
 }
 
+@media screen and (max-width: 770px) {
+    section#about .skills .content p{
+        font-size: 12px;
+    }
+}
+
 section#about .skills .content p i{
     font-size: 20px;
     padding-right: 10px;
@@ -776,6 +790,16 @@ section#about .education .content .box p{
     padding: 0;
 }
 
+@media screen and (max-width: 770px) {
+    section#about .education .content .box h5{
+        font-size: 11px;
+    }
+
+    section#about .education .content .box h3{
+        font-size: 13px;
+    }
+}
+
 
 
 
@@ -833,6 +857,21 @@ section#about .experience .content .box p{
 }
 
 
+@media screen and (max-width: 770px) {
+    section#about .experience .content .box{
+        width: 200px;
+        height: 200px;
+    }
+
+    section#about .experience .content .box h5{
+        font-size: 11px;
+    }
+
+    section#about .experience .content .box h3{
+        font-size: 13px;
+    }
+}
+
 
 section#about .experience button{
     display: block;
@@ -847,6 +886,12 @@ section#about .experience button{
     background: var(--accent-light);
     color: var(--text-dark);
     transition: .5s;
+}
+
+@media screen and (max-width: 770px) {
+    section#about .experience button{
+        font-size: 11px;
+    }
 }
 
 section#about .experience button i{
@@ -873,7 +918,8 @@ section#about .experience button:hover{
     }
 
     section#about .skills .head h4,
-    section#about .education .head h4{
+    section#about .education .head h4,
+    section#about .experience .head h4{
         font-size: 20px;
         position: static;
         text-align: center;
@@ -894,19 +940,16 @@ section#about .experience button:hover{
 
 
 /* projects baby */
-section#projects{
-    padding-bottom: 100px;
-}
-
 section#projects .content{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 30px;
     flex-wrap: wrap;
-    width: 100%;
+    width: 90%;
     margin: 50px auto;
 }
+
 
 section#projects .content .box{
     width: 350px;
@@ -917,6 +960,17 @@ section#projects .content .box{
     cursor: pointer;
     position: relative;
     overflow: hidden;
+}
+
+@media screen and (max-width: 770px) {
+    section#projects .content,
+    section#contacts .content{
+        width: 70%;
+    }
+
+    section#projects .content .box{
+        flex: 1 1 100%;
+    }
 }
 
 
@@ -978,23 +1032,10 @@ section#projects .content .box .des a:hover{
 }
 
 
-/* media screen for projects */
-@media screen and (max-width: 770px) {
-    section#projects .content .box{
-        width: 280px;
-        height: 200px;
-    }
-}
-
-
-
 
 
 
 /* contacts */
-section#contacts{
-    padding-bottom: 100px;
-}
 
 section#contacts .content{
     display: flex;
@@ -1003,6 +1044,7 @@ section#contacts .content{
     flex-wrap: wrap;
     width: 80%;
     margin: 50px auto;
+    padding: 0 20px;
 }
 
 section#contacts .content .left{
@@ -1023,6 +1065,7 @@ section#contacts .content .left i{
     margin: 0 10px;
 }
 
+
 section#contacts .content .left p{
     color: var(--text-light);
     font-size: 12px;
@@ -1030,11 +1073,36 @@ section#contacts .content .left p{
     margin: 0;
 }
 
+
+@media screen and (max-width: 770px) {
+    section#contacts .content .left i{
+        font-size: 12px;
+    }
+
+    section#contacts .content .left p{
+        font-size: 10px;
+    }
+}
+
 section#contacts .content .left h5{
     color: var(--text-light);
     font-size: 12px;
     padding: 0;
     margin-top: 40px;
+}
+
+@media screen and (max-width: 770px) {
+    section#contacts .content .left i{
+        font-size: 12px;
+    }
+
+    section#contacts .content .left p{
+        font-size: 10px;
+    }
+
+    section#contacts .content .left h5{
+        font-size: 10px;
+    }
 }
 
 section#contacts .content .left .links{

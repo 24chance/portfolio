@@ -11,12 +11,17 @@ x = document.querySelector('.closebtn')
 backToTop = document.querySelector(".back-to-top");
 loader = document.querySelector('.loader');
 hireBtn = document.querySelector('.hireBtn');
+hireBtnMenu = document.querySelector('.hireBtnMenu');
 resumeBtn = document.querySelector('#resume');
 
 
 
 // redirect to the email page when the hire button is clicked
 hireBtn.addEventListener('click', () => {
+    window.open("https://mail.google.com/mail/u/0/#inbox?compose=new", "_blank")
+})
+
+hireBtnMenu.addEventListener('click', () => {
     window.open("https://mail.google.com/mail/u/0/#inbox?compose=new", "_blank")
 })
 
